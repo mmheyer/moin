@@ -1,0 +1,49 @@
+# What is Software Engineering?
+
+Date: January 8, 2025
+Exam: 1
+
+## Course Overview: EECS 481 Software Engineering Introduction**
+
+**Key Learning Objectives**:
+
+- **Understand Software Engineering Fundamentals**
+    - Describe primary activities in software engineering
+    - Recognize the critical importance of software across various domains
+    - Learn about course structure and expectations
+
+**Software's Critical Role**:
+
+- **Pervasive Impact Across Industries**
+    - **Defense**: F-22 aircraft is essentially a software platform [1]
+    - **Space**: Ariane 5 rocket destroyed due to software conversion bug [2]
+    - **Healthcare**: Therac-25 radiation machine caused fatal radiation overdoses [3]
+    - **Privacy**: Massive data breaches like Equifax impacting millions [4][5]
+
+**Course Philosophy and Structure**:
+
+- **Practical Learning Approach**
+    - Focus on comprehension and maintenance, not just coding
+    - Majority of software engineering involves understanding existing code [6]
+    - Emphasizes team-based learning and practical skills
+
+**Core Course Topics**:
+
+- **Comprehensive Software Engineering Coverage**
+    - Measurement and risk
+    - Process and scheduling
+    - Quality assurance
+    - Code review and testing
+    - Software defects
+    - Design principles
+    - Productivity and team dynamics
+
+**Unique Course Themes**:
+
+- **Fundamental Perspectives**
+    - Software engineering is a human process
+    - Deals with large-scale challenges
+    - Requires strategic thinking
+    - Constrained by real-world limitations
+
+[The text has been generated with the help of AI]

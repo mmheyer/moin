@@ -1,0 +1,43 @@
+# [[https://eecs481.org/readings/Gulwani17.pdf|Gulwani (2017)]]
+
+## **📘 Summary of Chapter 1 –**
+
+### **🌟 What is Program Synthesis?**
+
+Program synthesis is the task of automatically constructing a program that satisfies a given specification. This can make programming more accessible, reduce human effort, and improve reliability.
+
+### **🔍 Motivation**
+
+- **Automation:** Reduces manual coding by generating programs from higher-level intent (e.g., examples or specifications).
+- **Accessibility:** Helps non-programmers interact with software by enabling them to express their intent without learning a programming language.
+- **Efficiency and Correctness:** Synthesized programs can be optimized or formally verified.
+
+### **📚 Applications Overview (Previewed in later chapters)**
+
+- **Data Wrangling:** Automating data transformation tasks.
+- **Education:** Teaching programming concepts using synthesized solutions.
+- **End-user programming:** For instance, using examples in Excel (like Flash Fill).
+- **Program Repair:** Suggesting fixes for buggy code.
+- **Programming by Natural Language:** Bridging human intent and code via natural language.
+
+### **⚙️ Key Techniques Introduced**
+
+The chapter briefly introduces four broad families of program synthesis techniques:
+
+1. **Enumerative** – Tries all programs up to a size limit.
+2. **Constraint-based** – Converts the synthesis problem into a constraint-solving one (e.g., using SMT solvers).
+3. **Stochastic** – Uses probabilistic models or random search (like genetic programming).
+4. **Deductive / PBE (Programming by Example)** – Infers programs consistent with user-provided examples.
+
+### **🔄 Learning Loop in Synthesis**
+
+- **User gives intent** (e.g., examples).
+- **System synthesizes a candidate program.**
+- **User validates or corrects** the system output.
+- **System refines the candidate**.
+
+### **🧠 Challenges Highlighted**
+
+- **Ambiguity** in user intent.
+- **Scalability** of synthesis for larger programs.
+- **Generalization** from limited user inputs.
