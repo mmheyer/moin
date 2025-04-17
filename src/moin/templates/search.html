@@ -26,6 +26,11 @@
         <p>
             {{ forms.render(medium_search_form['q']) }}
         </p>
+        {% if subitem_target %}
+            <div class="moin-search-scope">
+                <em>Searching within {{ subitem_target }} and subitems for: “{{ query }}”</em>
+            </div>
+        {% endif %}
         <div class="hint">{{ _("An Ajax transaction is submitted with each character keyed into the search box.
             Transactions may be completed out of order if keying is rapid.") }}
             <br><br>{{ _("For help on searching see:") }}

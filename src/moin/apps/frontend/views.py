@@ -453,6 +453,15 @@ def search(item_name):
         best_match = True
         query = query[1:]
 
+    # detect prefix and extract target item
+    subitem_target = None
+    if query and query.startswith(">"):
+        parts = query[1:].split(" ", 1)
+        if len(parts) == 2:
+            subitem_target, query = parts  # E.g., subitem_target = 'MyPage', query = 'blue'
+
+    # TODO: insert rest of new code here
+
     if valid or ajax:
         # most fields in the schema use a StandardAnalyzer, it omits fairly frequently used words
         # this finds such words and reports to the user
@@ -470,6 +479,16 @@ def search(item_name):
         q = qp.parse(query)
         _filter = []
         _filter = add_file_filters(_filter, filetypes)
+
+        # if the user specified a subitem target
+        if subitem_target:
+            # if they also specified an item name from the URL
+            if item_name:
+                # display a note that the subitem will override the item
+                flash("Note: Subitem target in query overrides the item in the URL.")
+            # update the item_name to be the subitem_target
+            item_name = subitem_target
+
         if item_name:  # Only search this item and subitems
             prefix_name = item_name + "/"
             terms = [Term(NAME_EXACT, item_name), Prefix(NAME_EXACT, prefix_name)]
@@ -527,6 +546,7 @@ def search(item_name):
                     whoosh_query=q,
                     whoosh_filter=_filter,
                     flaskg=flaskg,
+                    subitem_target=subitem_target,
                 )
             else:
                 html = render_template(
@@ -540,6 +560,7 @@ def search(item_name):
                     whoosh_query=q,
                     whoosh_filter=_filter,
                     flaskg=flaskg,
+                    subitem_target=subitem_target,
                 )
             flaskg.clock.stop("search render")
     else:

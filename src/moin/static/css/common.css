@@ -285,6 +285,7 @@ a.moin-item-overlay-lr:hover { opacity: .8; background-color: var(--bg-trans-hov
 .moin-suggestion-terms { font-size: .92em; font-weight: normal; color: var(--muted); }
 .moin-search-name { font-weight: bold; font-size: 1.25em; padding-right: 1em; }
 .moin-search-match { margin-top: 1.5em; margin-bottom: .2em; }
+.moin-search-scope { margin-bottom: 1em; font-size: 0.95em; color: #555; }
 
 /* misc moin css keywords */
 .moin-wordbreak { word-break: break-all; word-wrap: break-word; }
